@@ -173,13 +173,14 @@ class Link:
         self.link_id = link_id
 
 
-def main(node_file_name, link_file_name, minPoints, eps):
+def main(file_name, minPoints, eps):
+    node_file_name=file_name+'/node.csv'
+    link_file_name=file_name+'/link.csv'
     read_node(node_file_name, link_file_name)
     get_var_node()
     output(minPoints, eps)
 
 
 if __name__ == "__main__":
-    node_file_name = r'.\node.csv'
-    link_file_name = r'.\link.csv'
-    main(node_file_name, link_file_name, 3, 0.001)
+    file_name = r'.'
+    main(file_name, 3, 0.001)
